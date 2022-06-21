@@ -1,6 +1,9 @@
 const express = require("express");
+const morgan = require("morgan");
 const app = express();
 const port = 3000;
+
+app.use(module("combined"));
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
